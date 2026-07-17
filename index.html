@@ -83,5 +83,17 @@
   As an Amazon Associate we earn from qualifying purchases.<br>
   Prices and availability are accurate as of the time posted and may change.
 </footer>
+<script>
+  // Click tracking. Counts are kept in localStorage until a real analytics
+  // backend (GA4) is wired in; gtag() is called only if it exists.
+  function track(label) {
+    try {
+      var k = "vf_clicks", d = JSON.parse(localStorage.getItem(k) || "{}");
+      d[label] = (d[label] || 0) + 1;
+      localStorage.setItem(k, JSON.stringify(d));
+      if (typeof gtag === "function") gtag("event", "affiliate_click", { link_label: label });
+    } catch (e) { /* tracking must never break the outbound click */ }
+  }
+</script>
 </body>
 </html>
