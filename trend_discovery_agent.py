@@ -248,16 +248,63 @@ def write_outputs(run: DiscoveryRun) -> None:
 # ENTRY POINT
 # --------------------------------------------------------------------------
 
+MANUAL_FEED_JSON = "manual_products.json"
+
+
+def load_manual_feed() -> "DiscoveryRun | None":
+    """Fallback for accounts still behind Amazon's 3-sales PA-API gate.
+
+    Reads hand-picked products from manual_products.json (same schema as the
+    API output) so the rest of the pipeline — page builder, CRO agent, daily
+    cron — runs identically in manual and automatic mode. Entries with an
+    empty title or affiliate_url are skipped so the template's blank rows
+    never reach the page.
+    """
+    if not os.path.exists(MANUAL_FEED_JSON):
+        return None
+    with open(MANUAL_FEED_JSON, "r", encoding="utf-8") as f:
+        feed = json.load(f)
+    by_cat = {}
+    for category, items in (feed.get("by_category") or {}).items():
+        kept = []
+        for p in (items or []):
+            if not (p.get("title") and p.get("affiliate_url")):
+                continue
+            # Fill any fields the user deleted so downstream renderers never KeyError.
+            kept.append({**asdict(Product(asin="", title="")), **p, "category": category})
+        if kept:
+            by_cat[category] = kept
+    if not by_cat:
+        return None
+    run = DiscoveryRun(generated_at=datetime.utcnow().isoformat(), country=PAAPI_COUNTRY)
+    run.by_category = by_cat
+    return run
+
+
 def main() -> None:
-    if not PAAPI_AVAILABLE:
-        raise SystemExit("Install the SDK first:  pip install python-amazon-paapi")
     missing = [k for k, v in {
         "PAAPI_ACCESS_KEY": PAAPI_ACCESS_KEY,
         "PAAPI_SECRET_KEY": PAAPI_SECRET_KEY,
         "PAAPI_PARTNER_TAG": PAAPI_PARTNER_TAG,
     }.items() if not v]
+
     if missing:
-        raise SystemExit(f"Missing env vars: {', '.join(missing)}")
+        manual = load_manual_feed()
+        if manual is not None:
+            log.info(
+                f"PA-API keys not set ({', '.join(missing)}) — using MANUAL feed "
+                f"from {MANUAL_FEED_JSON} ({sum(len(v) for v in manual.by_category.values())} products). "
+                f"Automatic discovery takes over the day the keys go into .env."
+            )
+            write_outputs(manual)
+            return
+        raise SystemExit(
+            f"Missing env vars: {', '.join(missing)} — and {MANUAL_FEED_JSON} has no "
+            f"filled-in products to fall back on. Add products there or set the keys."
+        )
+
+    if not PAAPI_AVAILABLE:
+        raise SystemExit("Install the SDK first:  pip install python-amazon-paapi")
 
     run = run_discovery()
     write_outputs(run)

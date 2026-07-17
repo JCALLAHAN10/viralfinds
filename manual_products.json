@@ -1,0 +1,25 @@
+{
+  "_instructions": [
+    "MANUAL PRODUCT FEED \u2014 used until Amazon PA-API access unlocks.",
+    "Add products you've picked by hand. For each one:",
+    "  1. Find the product on amazon.com while logged into your Associates account.",
+    "  2. Use the SiteStripe bar (top of page) -> Get Link -> Text, and paste that",
+    "     tagged URL into affiliate_url. NEVER hand-build links without your tag.",
+    "  3. Copy title and price exactly as Amazon shows them TODAY. No made-up",
+    "     discounts, no invented claims \u2014 the page renders exactly what you put here.",
+    "  4. image_url: right-click the main product image -> Copy Image Address.",
+    "The category key (e.g. Beauty) becomes the section heading on the page.",
+    "Run ./run_daily.sh (or wait for the 7am run) after editing to publish."
+  ],
+  "by_category": {
+    "Beauty": [
+      {
+        "title": "Test Glow Serum",
+        "price": "$12.99",
+        "affiliate_url": "https://www.amazon.com/dp/B0MANUAL01?tag=test-20",
+        "category": "Beauty"
+      }
+    ],
+    "Apparel": []
+  }
+}
