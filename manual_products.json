@@ -12,7 +12,62 @@
     "Run ./run_daily.sh (or wait for the 7am run) after editing to publish."
   ],
   "by_category": {
-    "Beauty": [],
-    "Apparel": []
+    "Beauty": [
+      {
+        "asin": "B074PVTPBW",
+        "brand": "Hero Cosmetics",
+        "price": "$12.99",
+        "sales_rank": 4,
+        "title": "Mighty Patch Original Nighttime Acne Pimple Patches, 36 Ct",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61p+1+md+8L._AC_UL900_SR900,600_.jpg",
+        "affiliate_url": "https://www.amazon.com/dp/B074PVTPBW?tag=jcallahan1542-20&linkCode=ll1",
+        "list_price": "",
+        "category": "Beauty"
+      },
+      {
+        "asin": "B00T0C9XRK",
+        "brand": "essence",
+        "price": "$4.97",
+        "sales_rank": 25,
+        "title": "essence Lash Princess False Lash Effect Mascara",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61K6cQhw4EL._AC_UL900_SR900,600_.jpg",
+        "affiliate_url": "https://www.amazon.com/dp/B00T0C9XRK?tag=jcallahan1542-20&linkCode=ll1",
+        "list_price": "",
+        "category": "Beauty"
+      },
+      {
+        "asin": "B0B2RM68G2",
+        "brand": "BIODANCE",
+        "price": "$19.00",
+        "sales_rank": 8,
+        "title": "BIODANCE Bio-Collagen Real Deep Mask, Overnight Hydrogel Face Mask (4 Pack)",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/51ubxqzNGIL._AC_UL900_SR900,600_.jpg",
+        "affiliate_url": "https://www.amazon.com/dp/B0B2RM68G2?tag=jcallahan1542-20&linkCode=ll1",
+        "list_price": "",
+        "category": "Beauty"
+      },
+      {
+        "asin": "B071914GGL",
+        "brand": "The Ordinary",
+        "price": "$13.50",
+        "sales_rank": 5,
+        "title": "The Ordinary Glycolic Acid 7% Exfoliating Toner",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/51bC4vVdkOL._AC_UL900_SR900,600_.jpg",
+        "affiliate_url": "https://www.amazon.com/dp/B071914GGL?tag=jcallahan1542-20&linkCode=ll1",
+        "list_price": "",
+        "category": "Beauty"
+      },
+      {
+        "asin": "B09V7Z4TJG",
+        "brand": "medicube",
+        "price": "$18.90",
+        "sales_rank": 2,
+        "title": "medicube Zero Pore Pads 2.0, Dual-Textured Toner Pads, 70 Ct",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/71Mcspt-6AL._AC_UL900_SR900,600_.jpg",
+        "affiliate_url": "https://www.amazon.com/dp/B09V7Z4TJG?tag=jcallahan1542-20&linkCode=ll1",
+        "list_price": "",
+        "category": "Beauty"
+      }
+    ]
   }
 }
