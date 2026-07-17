@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+top_sellers.json
+top_sellers.md
+run_history.jsonl
+review_queue.json
+backups/
