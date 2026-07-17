@@ -12,14 +12,7 @@
     "Run ./run_daily.sh (or wait for the 7am run) after editing to publish."
   ],
   "by_category": {
-    "Beauty": [
-      {
-        "title": "Test Glow Serum",
-        "price": "$12.99",
-        "affiliate_url": "https://www.amazon.com/dp/B0MANUAL01?tag=test-20",
-        "category": "Beauty"
-      }
-    ],
+    "Beauty": [],
     "Apparel": []
   }
 }

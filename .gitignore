@@ -6,3 +6,5 @@ top_sellers.md
 run_history.jsonl
 review_queue.json
 backups/
+.gh_login*
+pipeline.log
