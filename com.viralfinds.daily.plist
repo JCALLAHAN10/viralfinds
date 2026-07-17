@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  macOS launchd job: runs the ViralFinds pipeline once a day at 07:00 local.
+
+  INSTALL:
+    cp com.viralfinds.daily.plist ~/Library/LaunchAgents/
+    launchctl load ~/Library/LaunchAgents/com.viralfinds.daily.plist
+
+  CHECK / STOP:
+    launchctl list | grep viralfinds
+    launchctl unload ~/Library/LaunchAgents/com.viralfinds.daily.plist
+
+  Adjust the Hour/Minute below to change the run time. The Mac must be awake
+  at that time (or the job runs at next wake). Output goes to pipeline.log.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.viralfinds.daily</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/jackcallahan/viralfinds/run_daily.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>7</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/Users/jackcallahan/viralfinds/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/jackcallahan/viralfinds/launchd.err.log</string>
+  <key>WorkingDirectory</key>
+  <string>/Users/jackcallahan/viralfinds</string>
+</dict>
+</plist>
