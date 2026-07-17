@@ -15,11 +15,12 @@ export PATH="$HOME/bin:$PATH"   # gh lives in ~/bin
 echo "===== run $(date '+%Y-%m-%d %H:%M:%S') =====" >> pipeline.log
 python3 orchestrator.py >> pipeline.log 2>&1
 
-# Deploy: only reached if the orchestrator succeeded (set -e above). Publishes
-# the freshly built page to GitHub Pages. No changes -> no commit -> no push.
+# Deploy: only reached if the orchestrator succeeded (set -e above). The
+# orchestrator commits per-stage, so commit anything left over, then push
+# whenever local main is ahead of origin.
 git add -A >> pipeline.log 2>&1
-if ! git diff --cached --quiet; then
-  git commit -m "Daily update $(date '+%Y-%m-%d')" >> pipeline.log 2>&1
+git diff --cached --quiet || git commit -m "Daily update $(date '+%Y-%m-%d')" >> pipeline.log 2>&1
+if [ "$(git rev-list --count origin/main..main)" -gt 0 ]; then
   git push origin main >> pipeline.log 2>&1
   echo "deployed to GitHub Pages" >> pipeline.log
 else
