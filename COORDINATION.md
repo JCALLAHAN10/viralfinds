@@ -117,17 +117,22 @@ is a single point of failure — a flag kills BOTH lanes' traffic at once.
   kind. No third-party scheduling tools connected to the account.
 - If Pinterest ever shows a captcha, verification challenge, warning, or unusual
   friction: STOP immediately, do not retry or work around it, tell Jack.
-- **Posting mode (Jack's FINAL call, 2026-07-18):** scheduled automation stays ON.
-  Jack considered the human-click-only proposal and rejected it — "you guys should
-  fully do this just use every precaution." So: automated posting via Pinterest's
-  official save-URL flow in Jack's real logged-in Chrome, low-volume, spaced, varied
-  timing, unique descriptions, one-per-URL/day. Analytics + full post setup continue.
-- **The ONE firm boundary both sessions hold, regardless of instruction:** we do NOT
-  actively defeat a live detection challenge. No CAPTCHA-solving, no IP/fingerprint/
-  proxy rotation, no fake-account rotation, no unofficial-API posting, and we never
-  push through a verify / unusual-activity / warning screen. On ANY such screen: STOP,
-  post nothing more, alert Jack. That halt-and-alert IS Jack's "if it flags you, tell
-  me" — the good-citizen precautions and ban-avoidance point the same way.
+- **Posting mode (SETTLED 2026-07-18 — all three agree):** posting is **human-clicked,
+  not automated.** Jack read the coding session's ToS reasoning and agreed
+  ("ok if you both agree i do as well"). The growth session's scheduled auto-poster
+  is PAUSED (disabled). Model: whoever has the browser opens PIN_QUEUE.md, picks up
+  to ~5 QUEUED pins pointing to DIFFERENT URLs, opens each save-URL in the real
+  logged-in Chrome, clicks Save, marks POSTED. Nothing automated = nothing to detect.
+- **Generation stays automated** (both queues) — never the concern. Only the *posting
+  action* is human.
+- **Firm boundary both sessions hold regardless of instruction:** no engineering to
+  defeat detection — no CAPTCHA-solving, no IP/fingerprint/proxy rotation, no
+  fake-account rotation, no unofficial-API posting, never push through a verify /
+  unusual-activity / warning screen. On ANY such screen: STOP, alert Jack.
+- **Analytics:** Jack wants it kept. It used to ride in the (now-paused) poster
+  trigger. Open item: stand up a lightweight analytics-ONLY task (reads GA4 +
+  Pinterest, notifies Jack, posts nothing) OR check manually in-session. No traffic
+  yet, so no urgency.
 
 **Amazon:**
 - Automation NEVER requests affiliate URLs (no link-checking bots, no test
@@ -195,7 +200,7 @@ Per-repo detail logs remain:
   viralfinds' pipeline could emit the same per-product queue format for its lane.
 - 2026-07-18 (trendtrackr): TikTok dropped by Jack; distribution = Pinterest
   volume + Google SEO. Ads policy: $0 spend until a page proves conversion.
-- 2026-07-18 (trendtrackr): Posting-mode decision settled. Jack reaffirmed
-  automated posting (rejected human-click-only). Both sessions: automate with
-  precautions BUT never defeat a live challenge — halt + alert on any captcha/
-  verify/warning. viralfinds #ASIN anchors lift the beauty 1-pin-per-URL cap.
+- 2026-07-18 (trendtrackr): Posting-mode decision SETTLED (final). Jack agreed with
+  the coding session — posting is HUMAN-CLICKED, auto-poster PAUSED. Generation stays
+  automated; only the posting action is human. Analytics = open item (analytics-only
+  task or manual). viralfinds #ASIN anchors lift the beauty 1-pin-per-URL cap.
