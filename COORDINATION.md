@@ -55,9 +55,10 @@ linking to trendtrackr's water bottles article). Rules:
 measurement ID `G-QZNTTBBY76`, LIVE and firing on trendtrackr. Event-scoped
 custom dimension "Link Label" (`link_label` param) is registered; every affiliate
 link fires `affiliate_click` with a unique per-product label via `ttTrack()`.
-**Recommendation for viralfinds:** add a SECOND data stream (or its own property)
-in the same GA4 account rather than reusing stream `G-QZNTTBBY76` — mixing both
-sites into one stream would scramble per-site data. Admin access is Jack's
+**viralfinds now has its own property** (created 2026-07-18, same GA4 account):
+"ViralFinds", measurement ID `G-6VQD761326`, live and firing on
+jcallahan10.github.io/viralfinds/ (pageviews + `affiliate_click` with
+`link_label` param, same event naming as trendtrackr). Do not mix streams. Admin access is Jack's
 Google account (jcallahan154@gmail.com) via Chrome. viralfinds' CRO script
 correctly no-ops until this is wired.
 
