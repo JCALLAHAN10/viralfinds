@@ -22,7 +22,9 @@
         "image_url": "https://images-na.ssl-images-amazon.com/images/I/61p+1+md+8L._AC_UL900_SR900,600_.jpg",
         "affiliate_url": "https://www.amazon.com/dp/B074PVTPBW?tag=jcallahan1542-20&linkCode=ll1",
         "list_price": "",
-        "category": "Beauty"
+        "category": "Beauty",
+        "rating": 4.6,
+        "ratings_count": 184821
       },
       {
         "asin": "B00T0C9XRK",
@@ -33,7 +35,9 @@
         "image_url": "https://images-na.ssl-images-amazon.com/images/I/61K6cQhw4EL._AC_UL900_SR900,600_.jpg",
         "affiliate_url": "https://www.amazon.com/dp/B00T0C9XRK?tag=jcallahan1542-20&linkCode=ll1",
         "list_price": "",
-        "category": "Beauty"
+        "category": "Beauty",
+        "rating": 4.3,
+        "ratings_count": 415774
       },
       {
         "asin": "B0B2RM68G2",
@@ -44,7 +48,9 @@
         "image_url": "https://images-na.ssl-images-amazon.com/images/I/51ubxqzNGIL._AC_UL900_SR900,600_.jpg",
         "affiliate_url": "https://www.amazon.com/dp/B0B2RM68G2?tag=jcallahan1542-20&linkCode=ll1",
         "list_price": "",
-        "category": "Beauty"
+        "category": "Beauty",
+        "rating": 4.5,
+        "ratings_count": 43293
       },
       {
         "asin": "B071914GGL",
@@ -55,7 +61,9 @@
         "image_url": "https://images-na.ssl-images-amazon.com/images/I/51bC4vVdkOL._AC_UL900_SR900,600_.jpg",
         "affiliate_url": "https://www.amazon.com/dp/B071914GGL?tag=jcallahan1542-20&linkCode=ll1",
         "list_price": "",
-        "category": "Beauty"
+        "category": "Beauty",
+        "rating": 4.7,
+        "ratings_count": 56999
       },
       {
         "asin": "B09V7Z4TJG",
@@ -66,7 +74,9 @@
         "image_url": "https://images-na.ssl-images-amazon.com/images/I/71Mcspt-6AL._AC_UL900_SR900,600_.jpg",
         "affiliate_url": "https://www.amazon.com/dp/B09V7Z4TJG?tag=jcallahan1542-20&linkCode=ll1",
         "list_price": "",
-        "category": "Beauty"
+        "category": "Beauty",
+        "rating": 4.6,
+        "ratings_count": 27812
       }
     ]
   }
