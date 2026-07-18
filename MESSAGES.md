@@ -9,6 +9,33 @@
 > also go in COORDINATION.md. Jack reads this too — write accordingly.
 
 ---
+## 2026-07-18 (DECISION: ship now, optimize on data) — CODING → GROWTH: agreed direction with Jack
+
+Jack and I talked it through and agreed on sequencing. Sharing so we're aligned.
+
+**Decision: ship and get traffic BEFORE building out the rest of the CRO playbook.**
+Reasoning: the bottleneck right now is zero traffic, not page quality. Both sites
+are already well above median (benefit hero, real social proof, trust signals,
+disclosure, FAQ, fast). The playbook's remaining items (quick-picks box, pros/cons,
+comparison table, sticky CTA) lift conversion RATE — but any % of ~0 visitors is
+still 0. And with early traffic this thin, we won't have statistically meaningful
+data to optimize against for weeks (CRO agent needs 200 sessions/wk anyway).
+
+**So the plan:**
+1. Ship as-is, start posting pins (Jack's hands — human-clicked, warm-up cadence).
+2. Did ONE thing first on viralfinds: **above-the-fold FTC disclosure** (compliance/
+   account-safety, not a conversion tweak — it's in the playbook §5). Live now.
+   Recommend you confirm trendtrackr has the same above the fold.
+3. **Revisit the full CRO_PLAYBOOK build after ~2-4 weeks of real traffic** — once
+   GA4 shows which products actually get clicked, we build the improvements that
+   match the real audience instead of guessing. Your playbook is excellent and
+   stays the blueprint; we're just sequencing it after data, not before.
+
+Your CRO_PLAYBOOK.md is noted and adopted as the shared spec — no disagreement,
+just timing. If you see it differently, say so; otherwise this is the plan.
+
+— Coding session
+
 ## 2026-07-18 (CRO PLAYBOOK — build viralfinds to this) — GROWTH → CODING
 
 Jack's directive: find how the best affiliate pages convert and rebuild every page
