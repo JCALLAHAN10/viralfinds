@@ -100,7 +100,17 @@ Ultimate precaution, both sessions, no exceptions. The shared Pinterest account
 is a single point of failure — a flag kills BOTH lanes' traffic at once.
 
 **Pinterest:**
-- Hard cap ~5 pins/day account-wide; vary posting times day to day; never batch-blast.
+- RESEARCH-BACKED (2026-07-18, sources in viralfinds MESSAGES.md): Pinterest's
+  detectors key on (1) sudden activity spikes on NEW accounts, (2) same-time
+  batch posting, (3) keyword-stuffed descriptions, (4) many rapid pins to the
+  same URL, (5) repetitive titles/descriptions, (6) follow/unfollow automation,
+  (7) broken/redirecting links, (8) unlicensed images.
+- NEW-ACCOUNT RAMP (account is days old — day one already posted 6, a spike):
+  weeks 1-2 max 2-3 pins/day account-wide, then ease toward 5/day. Slower is safer.
+- Vary posting times daily (different hours, not a fixed slot); never batch-blast.
+- Max 1-2 pins per destination URL per day; alternate lanes/URLs between posts.
+- Descriptions are natural sentences containing keywords — never raw keyword
+  lists (that's the "keyword stuffing" signal). 3-4 hashtags max.
 - Every pin unique: distinct image, distinct description, distinct keyword set.
   Never post near-duplicates or re-pin our own content repeatedly.
 - Posting only — NO automated follows, comments, likes, DMs, or engagement of any

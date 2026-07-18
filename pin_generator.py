@@ -120,29 +120,33 @@ def render_pin(p, path):
     img.save(path, "PNG")
 
 
-# Per-product keyword clusters (Jack's directive: maximize tag/keyword coverage).
-# Pinterest ranks on keywords in descriptions, so these go inline + a few hashtags.
-KEYWORDS = {
-    "B074PVTPBW": ("acne patches, pimple patches, hydrocolloid patches, acne treatment, "
-                   "clear skin, skincare routine, breakout fix", "#acnetreatment #skincare #clearskin"),
-    "B00T0C9XRK": ("mascara, drugstore makeup, eye makeup, lashes, false lash effect, "
-                   "makeup must haves, affordable makeup", "#mascara #makeup #beautyfinds"),
-    "B0B2RM68G2": ("face mask, overnight mask, collagen mask, K-beauty, korean skincare, "
-                   "glass skin, hydrating skincare, self care night", "#kbeauty #facemask #glassskin"),
-    "B071914GGL": ("toner, exfoliating toner, glycolic acid, skincare routine, glowing skin, "
-                   "brightening skincare, affordable skincare", "#skincareroutine #glowingskin #theordinary"),
-    "B09V7Z4TJG": ("toner pads, pore care, K-beauty, korean skincare, exfoliating pads, "
-                   "skincare routine, smooth skin, glass skin", "#kbeauty #skincare #porecare"),
+# Per-product natural-language hooks. Research finding (2026-07-18): raw
+# comma-separated keyword lists read as "keyword stuffing" — a known Pinterest
+# spam signal. Keywords must be woven into natural sentences instead.
+HOOKS = {
+    "B074PVTPBW": ("The overnight hydrocolloid acne patch that clears breakouts while you "
+                   "sleep — the pimple patch every clear-skin routine starts with.",
+                   "#skincare #acnetreatment #tiktokmademebuyit"),
+    "B00T0C9XRK": ("The $5 drugstore mascara with a false-lash effect that beats $30 "
+                   "tubes — the eye makeup find TikTok can't stop repurchasing.",
+                   "#makeup #mascara #beautyfinds"),
+    "B0B2RM68G2": ("The Korean overnight collagen face mask behind the glass-skin trend — "
+                   "hydrating K-beauty self-care that works while you sleep.",
+                   "#kbeauty #facemask #glassskin"),
+    "B071914GGL": ("The cult glycolic acid exfoliating toner for glowing skin — the "
+                   "affordable brightening step in every viral skincare routine.",
+                   "#skincareroutine #glowingskin #tiktokmademebuyit"),
+    "B09V7Z4TJG": ("Dual-textured Korean toner pads that exfoliate and clear pores in one "
+                   "swipe — the K-beauty shortcut to smooth glass skin.",
+                   "#kbeauty #skincare #porecare"),
 }
 
 
 def save_url(p, media_url):
-    kw, tags = KEYWORDS.get(p["asin"], ("beauty finds, skincare", "#beautyfinds"))
-    desc = (f'TikTok Viral Beauty 2026: {p["title"]} — {p["rating"]}★, '
-            f'{p["ratings_count"]:,} ratings, verified against Amazon\'s live Best '
-            f'Sellers rankings. {kw}. All 5 verified TikTok-viral beauty picks on '
-            f'ViralFinds. TikTok made me buy it, viral Amazon finds, beauty must haves. '
-            f'{tags} #tiktokmademebuyit #amazonfinds')
+    hook, tags = HOOKS.get(p["asin"], ("A verified TikTok-viral beauty find.", "#beautyfinds"))
+    desc = (f'{p["title"]} — {p["rating"]} stars from {p["ratings_count"]:,} real Amazon '
+            f'reviews, verified against the live Best Sellers rankings. {hook} '
+            f'See all 5 verified TikTok-viral beauty picks on ViralFinds. {tags}')
     q = urllib.parse.urlencode({"url": SITE_URL, "media": media_url, "description": desc})
     return f"https://www.pinterest.com/pin/create/button/?{q}"
 
