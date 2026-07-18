@@ -19,6 +19,9 @@ python3 orchestrator.py >> pipeline.log 2>&1
 # with the product feed. Cheap no-ops when nothing changed.
 python3 article_generator.py >> pipeline.log 2>&1
 python3 pin_generator.py >> pipeline.log 2>&1
+# Human click-list: posting is done by Jack by hand (no automated posting on
+# this side — the safe, ToS-clean path). This just keeps the click-list fresh.
+python3 -c "import subprocess,re,sys; exec(open('build_post_list.py').read())" >> pipeline.log 2>&1 || true
 
 # Deploy: only reached if the orchestrator succeeded (set -e above). The
 # orchestrator commits per-stage, so commit anything left over, then push
