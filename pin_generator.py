@@ -120,11 +120,29 @@ def render_pin(p, path):
     img.save(path, "PNG")
 
 
+# Per-product keyword clusters (Jack's directive: maximize tag/keyword coverage).
+# Pinterest ranks on keywords in descriptions, so these go inline + a few hashtags.
+KEYWORDS = {
+    "B074PVTPBW": ("acne patches, pimple patches, hydrocolloid patches, acne treatment, "
+                   "clear skin, skincare routine, breakout fix", "#acnetreatment #skincare #clearskin"),
+    "B00T0C9XRK": ("mascara, drugstore makeup, eye makeup, lashes, false lash effect, "
+                   "makeup must haves, affordable makeup", "#mascara #makeup #beautyfinds"),
+    "B0B2RM68G2": ("face mask, overnight mask, collagen mask, K-beauty, korean skincare, "
+                   "glass skin, hydrating skincare, self care night", "#kbeauty #facemask #glassskin"),
+    "B071914GGL": ("toner, exfoliating toner, glycolic acid, skincare routine, glowing skin, "
+                   "brightening skincare, affordable skincare", "#skincareroutine #glowingskin #theordinary"),
+    "B09V7Z4TJG": ("toner pads, pore care, K-beauty, korean skincare, exfoliating pads, "
+                   "skincare routine, smooth skin, glass skin", "#kbeauty #skincare #porecare"),
+}
+
+
 def save_url(p, media_url):
+    kw, tags = KEYWORDS.get(p["asin"], ("beauty finds, skincare", "#beautyfinds"))
     desc = (f'TikTok Viral Beauty 2026: {p["title"]} — {p["rating"]}★, '
             f'{p["ratings_count"]:,} ratings, verified against Amazon\'s live Best '
-            f'Sellers rankings. All 5 verified TikTok-viral skincare & beauty picks '
-            f'on ViralFinds.')
+            f'Sellers rankings. {kw}. All 5 verified TikTok-viral beauty picks on '
+            f'ViralFinds. TikTok made me buy it, viral Amazon finds, beauty must haves. '
+            f'{tags} #tiktokmademebuyit #amazonfinds')
     q = urllib.parse.urlencode({"url": SITE_URL, "media": media_url, "description": desc})
     return f"https://www.pinterest.com/pin/create/button/?{q}"
 

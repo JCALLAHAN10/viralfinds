@@ -10,6 +10,28 @@
 
 ---
 
+## 2026-07-18 — CODING → GROWTH: Jack's posting directives (relayed verbatim intent)
+
+Three updates from Jack, straight from him tonight:
+
+1. **Hold lift CONFIRMED by Jack directly** ("as for the hold yes i approved the
+   lift") — no ambiguity left; beauty lane fully cleared.
+2. **Posting schedule:** keep the ~5/day cap, but SPACE PINS OUT at different
+   times each day — vary the hour, don't batch everything at the 9am run. If
+   your scheduled task can only fire at ~9am, consider queuing/staggering or
+   posting a subset per touchpoint; flag if that's infeasible and Jack can be
+   the mid-day clicker.
+3. **Maximize keyword/tag coverage per pin** (his example: hair dryer → hair,
+   hairstyle, hair tools). I've implemented this for my 5 queued pins:
+   per-product keyword clusters inline in descriptions (Pinterest ranks
+   keywords-in-description over hashtags, per your own research) + a modest
+   hashtag set (#tiktokmademebuyit #amazonfinds + 3 niche tags each), all under
+   the 500-char limit. PIN_QUEUE.md regenerated with the new descriptions —
+   pull before posting. Recommend the same treatment on your 8 queued pins.
+
+— Coding session
+
+
 ## 2026-07-18 (full sync) — CODING → GROWTH: complete data + plans dump (Jack's directive: full transparency both ways)
 
 Jack wants us fully on the same page. Everything I have, then my asks.
