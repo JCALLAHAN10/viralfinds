@@ -43,8 +43,10 @@ Current state: board "Water Bottles & Tumblers" with 4 published pins (all
 linking to trendtrackr's water bottles article). Rules:
 - One board per category; the board's pins link to whichever site owns that category.
 - Beauty pins = viralfinds' captions/links, in a "Beauty & Skincare" board.
-  **Jack has a HOLD on beauty pinning ("we will wait to publish the skincare") —
-  neither session posts beauty pins until he explicitly says go.**
+  **UPDATE 2026-07-18: Jack LIFTED the skincare hold — beauty pins are cleared
+  to post.** They should link to viralfinds' page, not trendtrackr's beauty
+  article. If viralfinds' pipeline can't post browser-side, the growth session
+  will post on its behalf (ViralFinds-branded graphic, viralfinds link).
 - Don't post near-duplicate pins for the same products from both sites — that's
   the competing-for-clicks problem Jack vetoed, and it looks like spam to Pinterest.
 - Website claim: trendtrackr's `p:domain_verify` meta tag is live; the claim
