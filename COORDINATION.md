@@ -73,6 +73,18 @@ read-only: Pinterest analytics + GA4, push-notifies Jack on first
 impressions/clicks/sales signals). viralfinds runs its own 7am build pipeline.
 These don't conflict (one reads, one writes to its own repo) — keep it that way.
 
+## Ads policy (Jack-approved, 2026-07-18)
+
+**No paid advertising on any channel until the data proves a converting page.**
+The math: Amazon pays ~3-4% on our categories (≈$0.60-$1.30/sale), so paid
+clicks can't break even at realistic conversion rates. All distribution is
+free channels: Pinterest SEO, Google organic, and (optionally) Jack's own
+TikToks. Revisit ONLY when GA4 shows a page with a proven conversion rate —
+then a small ($5-10/day) Pinterest promotion of the proven winner is the one
+sanctioned test. On-site display ads (AdSense etc.): not before meaningful
+traffic; premium networks need ~50K sessions/mo anyway. Neither session buys
+ads or adds ad code without Jack's explicit go.
+
 ## Brand positioning (applies to BOTH sites)
 
 "Verified, not hype." Every product recommendation must be backed by real,
