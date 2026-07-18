@@ -190,6 +190,7 @@ def full_scaffold(products_block: str) -> str:
     .trust {{ display:flex; flex-wrap:wrap; gap:9px; justify-content:center; padding:20px 14px 6px; }}
     .trust span {{ background:rgba(255,255,255,.05); border:1px solid var(--line); color:var(--text); font-size:.75rem; padding:7px 14px; border-radius:100px; backdrop-filter:blur(6px); }}
     .trust b {{ background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }}
+    .disclosure {{ text-align:center; color:var(--muted); font-size:.72rem; max-width:520px; margin:12px auto 0; padding:0 20px; }}
     .cat {{ padding:14px 14px 4px; max-width:940px; margin:0 auto; }}
     .cat h2 {{ font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:1.4rem; margin:26px 6px 14px; display:flex; align-items:center; gap:10px; }}
     .cat h2::after {{ content:""; flex:1; height:1px; background:linear-gradient(90deg,var(--line),transparent); }}
@@ -239,6 +240,7 @@ def full_scaffold(products_block: str) -> str:
     <span>✓ Real ratings &amp; review counts</span>
     <span>✓ No fake urgency, ever</span>
   </div>
+  <p class="disclosure">Disclosure: we earn a commission on purchases made through our links, at no extra cost to you.</p>
   <main>
 {products_block}
     <div class="midcta"><a href="articles/tiktok-viral-skincare-verified.html">Read the full verified guide →</a></div>
