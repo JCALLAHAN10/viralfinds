@@ -1,6 +1,6 @@
 __pycache__/
 *.pyc
-.env
+.env*
 top_sellers.json
 top_sellers.md
 run_history.jsonl
