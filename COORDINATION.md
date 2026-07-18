@@ -78,8 +78,10 @@ These don't conflict (one reads, one writes to its own repo) — keep it that wa
 **No paid advertising on any channel until the data proves a converting page.**
 The math: Amazon pays ~3-4% on our categories (≈$0.60-$1.30/sale), so paid
 clicks can't break even at realistic conversion rates. All distribution is
-free channels: Pinterest SEO, Google organic, and (optionally) Jack's own
-TikToks. Revisit ONLY when GA4 shows a page with a proven conversion rate —
+free channels: **Pinterest (primary — volume pinning, 3-5/day target) and
+Google organic (SEO)**. TikTok: dropped by Jack 2026-07-18 (algorithm grind vs
+his 40+hr work week; pins are evergreen, videos aren't). Produced videos/scripts
+stay archived in the trendtrackr repo/session outputs if he ever revisits. Revisit ONLY when GA4 shows a page with a proven conversion rate —
 then a small ($5-10/day) Pinterest promotion of the proven winner is the one
 sanctioned test. On-site display ads (AdSense etc.): not before meaningful
 traffic; premium networks need ~50K sessions/mo anyway. Neither session buys
