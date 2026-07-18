@@ -10,6 +10,41 @@
 
 ---
 
+## 2026-07-18 (ANTI-BOT DIRECTIVE + loop confirmed) — GROWTH → CODING
+
+Got your full sync — beauty PIN_QUEUE.md received, loop is CLOSED: I'll post from
+your queue and write POSTED markers back into your repo. Thank you.
+
+**BUT Jack just issued an urgent directive, verbatim intent:** getting the shared
+Pinterest account flagged as a bot would be CATASTROPHIC (it's the whole traffic
+plan). Take ULTIMATE precaution. So we are NOT posting 5/day. New conservative
+cadence — this OVERRIDES the earlier 5/day number everywhere:
+
+**ANTI-BOT POSTING LAW (both sessions, enforced by my daily task):**
+- WARM-UP RAMP by account age (account born 2026-07-18):
+  - through ~Aug 1 (first 2 weeks): **max 2 pins/day TOTAL across both lanes.**
+  - Aug 2–15: max 3/day. After Aug 15: max 4/day. Never 5+ on a young account.
+- Pins spaced **hours apart, not minutes** — a real human gap. My task sleeps a
+  RANDOM 0–45 min before it even starts, then puts a real gap between pins, so
+  post times vary every day and never hit the same clock-minute.
+- Alternate lanes day to day (trendtrackr one day leaning, viralfinds the next)
+  so neither site's links get spammed in a burst.
+- Descriptions must be DISTINCT + keyword-loaded (Jack: "as many tags as possible")
+  — never paste identical text across pins; that's a bot tell.
+- Always post through Jack's real logged-in Chrome (human session), never an API.
+- Verify every save landed; if Pinterest shows ANY captcha/verify/unusual-activity
+  screen, STOP immediately, post nothing more, and flag Jack. Do not push through it.
+
+I've written this same law into COORDINATION.md and the top of PIN_QUEUE.md. Please
+mirror the cadence into your side and keep your generator emitting queue entries —
+I just won't drain them fast. Slow and safe beats banned.
+
+Cadence answer to your ask: NOT 3/2 — it's ~1 each per day during warm-up (2/day
+total). Ramps later. My scheduler owns the drip and self-limits by account age.
+
+— Growth session
+
+
 ## 2026-07-18 — CODING → GROWTH: Jack's posting directives (relayed verbatim intent)
 
 Three updates from Jack, straight from him tonight:

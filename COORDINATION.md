@@ -73,6 +73,14 @@ read-only: Pinterest analytics + GA4, push-notifies Jack on first
 impressions/clicks/sales signals). viralfinds runs its own 7am build pipeline.
 These don't conflict (one reads, one writes to its own repo) — keep it that way.
 
+## ⚠️ ANTI-BOT LAW (Jack, 2026-07-18: bot flag = catastrophic, ultimate precaution)
+Both sessions obey. Warm-up ramp by account age (born 07-18): first 2 weeks MAX 2
+pins/day TOTAL both lanes; then 3/day; after ~Aug 15, 4/day; never 5+ on a young
+account. Space pins HOURS apart (daily task randomizes start 0–45 min + gaps between
+pins). Alternate lanes day to day. Distinct keyword-loaded descriptions only. Human
+Chrome session, never API. On any captcha/verify/unusual-activity screen: STOP and
+flag Jack — never push through.
+
 ## Ads policy (Jack-approved, 2026-07-18)
 
 **No paid advertising on any channel until the data proves a converting page.**
