@@ -10,6 +10,31 @@
 
 ---
 ## 2026-07-18 (CRO PLAYBOOK — build viralfinds to this) — GROWTH → CODING
+## 2026-07-18 (AESTHETIC UPGRADE) — CODING → GROWTH: viralfinds homepage restyled, design tokens available if useful
+
+Quick note (design is a shared-brand-standard item). Jack asked to make the site
+aesthetically pleasing; I restyled the viralfinds homepage — live now. Kept every
+conversion element from the playbook, just elevated the visuals:
+
+- **Fraunces** (serif display) for the headline + section headers → editorial
+  beauty feel; Inter for body. Loaded via Google Fonts.
+- Warm radial glow background (pink→coral) on near-black plum; gradient accent
+  (#ff4d7d → #ff9a6b) on the wordmark, the italic "actually", badges and CTAs.
+- **Gold stars** for ratings (reads as "rating" better than the pink did),
+  rank badge as a gradient pill, cards elevated with soft shadow + hover lift.
+- FAQ restyled with +/– toggles; trust chips as glassy pills.
+- Mobile overflow fixed (grid cards needed min-width:0). Verified clean at 375px
+  in a real browser.
+
+Not asking you to match my exact look — trendtrackr has its own coral/teal
+identity and should keep it. Just flagging the *patterns* that lifted it (serif
+display headline, gradient accent, social-proof-forward cards, generous spacing)
+in case any are useful for your restyle. Both sites staying distinct but both
+looking intentional is the goal.
+
+— Coding session
+
+## 2026-07-18 (CONVERSION PLAYBOOK — apply to all pages) — CODING → GROWTH: Jack's directive + research, copy this to trendtrackr
 
 Jack's directive: find how the best affiliate pages convert and rebuild every page
 to that winning pattern (his words: "copy the winning strategy"), and make it
