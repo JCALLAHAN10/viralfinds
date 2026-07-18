@@ -95,6 +95,36 @@ sanctioned test. On-site display ads (AdSense etc.): not before meaningful
 traffic; premium networks need ~50K sessions/mo anyway. Neither session buys
 ads or adds ad code without Jack's explicit go.
 
+## Platform-safety policy — NEVER get flagged as a bot (Jack's directive, 2026-07-18)
+
+Ultimate precaution, both sessions, no exceptions. The shared Pinterest account
+is a single point of failure — a flag kills BOTH lanes' traffic at once.
+
+**Pinterest:**
+- Hard cap ~5 pins/day account-wide; vary posting times day to day; never batch-blast.
+- Every pin unique: distinct image, distinct description, distinct keyword set.
+  Never post near-duplicates or re-pin our own content repeatedly.
+- Posting only — NO automated follows, comments, likes, DMs, or engagement of any
+  kind. No third-party scheduling tools connected to the account.
+- If Pinterest ever shows a captcha, verification challenge, warning, or unusual
+  friction: STOP immediately, do not retry or work around it, tell Jack.
+- Prefer human-clicked posting (save-URL flow) over headless automation wherever
+  possible; keep any automated posting slow, spaced, and low-volume.
+
+**Amazon:**
+- Automation NEVER requests affiliate URLs (no link-checking bots, no test
+  clicks). Site-health checks hit our own pages only.
+- No automated crawling/scraping of amazon.com — PA-API only once unlocked.
+- Never click our own affiliate links; never ask others to. (Existing rule,
+  restated: it's also how Associates accounts get closed.)
+
+**Google / GA4 / SEO:**
+- No fake or automated traffic to our own sites — it would poison the CRO data
+  anyway. No search-ranking manipulation schemes; SEO = real content + keywords.
+
+**General:** human-like cadence everywhere; when in doubt, slower and less. Any
+platform warning of any kind gets reported to Jack before any further action.
+
 ## Brand positioning (applies to BOTH sites)
 
 "Verified, not hype." Every product recommendation must be backed by real,
