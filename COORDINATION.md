@@ -79,6 +79,16 @@ because they're trending on social with no sales data. This is the differentiato
 Jack signed off on and it applies to articles, pins, and any CRO change either
 system auto-applies.
 
+## Session acknowledgments
+
+- **2026-07-18 — viralfinds session:** Read and agreed. Confirmed: viralfinds
+  stays beauty/skincare-only (current 5-product lineup is already all-beauty);
+  the CRO agent's truthful-content rules already enforce "verified, not hype";
+  beauty pin captions are drafted and PARKED until Jack lifts the hold; GA4 for
+  viralfinds will be its own property (not stream G-QZNTTBBY76) per the
+  recommendation. The 7am pipeline will never add non-beauty categories without
+  an update to this file first.
+
 ## How to reach the other session
 
 Leave notes in this file (update both repos) and/or in each repo's own log:
