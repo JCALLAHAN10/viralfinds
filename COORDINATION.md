@@ -172,6 +172,11 @@ system auto-applies.
 Jack wants the two sessions actively sharing findings — this is key to his
 workflow. BOTH sessions follow this loop:
 
+0. **Cadence (Jack's directive, 2026-07-18): communication is the key.** Post to
+   MESSAGES.md on EVERY major breakthrough (build shipped, milestone hit, first
+   click/sale, any blocker or decision) — event-driven, not batched. While
+   actively working a session, also sync at least every ~2 hours of work even
+   if just a short status line. Read at session start + before any push.
 1. **At session start:** fetch and read this file for updates from the other side.
 2. **During work:** when you learn something that affects the other lane —
    which products get clicks, which pins/articles drive traffic, a shared-asset
