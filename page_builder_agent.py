@@ -155,46 +155,83 @@ def full_scaffold(products_block: str) -> str:
   <title>ViralFinds — TikTok-Viral Beauty, Verified Against Amazon Best Sellers</title>
   <meta name="description" content="Every product verified against Amazon's live Best Sellers rankings before we recommend it. Real ratings, real ranks, real prices. Verified, not hype.">
   {ga}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {{ --bg:#0f0f14; --card:#1b1b24; --accent:#ff3b6b; --text:#f4f4f8; --muted:#9a9aa8; }}
+    :root {{
+      --bg:#0d0910; --bg2:#140d16; --card:#1b131e; --line:rgba(255,255,255,.08);
+      --accent:#ff4d7d; --accent2:#ff9a6b; --gold:#ffcf5c;
+      --text:#f7f0f5; --muted:#a99caa;
+      --grad:linear-gradient(135deg,var(--accent),var(--accent2));
+    }}
     * {{ box-sizing:border-box; }}
-    body {{ margin:0; font-family:-apple-system,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }}
-    .hero {{ padding:40px 20px 20px; text-align:center; max-width:640px; margin:0 auto; }}
-    .hero h1 {{ margin:0 0 10px; font-size:1.75rem; line-height:1.2; }}
-    .hero h1 span {{ color:var(--accent); }}
-    .hero p {{ color:var(--muted); margin:0 auto; max-width:460px; }}
-    .trust {{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; padding:16px 12px 4px; }}
-    .trust span {{ background:var(--card); color:var(--text); font-size:.74rem; padding:6px 12px; border-radius:20px; }}
-    .trust b {{ color:var(--accent); }}
-    .cat {{ padding:12px 12px 4px; max-width:900px; margin:0 auto; }}
-    .cat h2 {{ font-size:1.15rem; margin:20px 4px 10px; }}
-    .grid {{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }}
-    .card {{ background:var(--card); border-radius:14px; overflow:hidden; text-decoration:none; color:inherit; display:flex; flex-direction:column; transition:transform .12s; }}
+    html, body {{ overflow-x:hidden; max-width:100%; }}
+    img {{ max-width:100%; }}
+    h1 {{ overflow-wrap:break-word; }}
+    body {{
+      margin:0; color:var(--text); line-height:1.55;
+      font-family:'Inter',-apple-system,system-ui,sans-serif;
+      background:
+        radial-gradient(60% 45% at 50% -5%, rgba(255,77,125,.20), transparent 70%),
+        radial-gradient(50% 40% at 90% 10%, rgba(255,154,107,.12), transparent 70%),
+        var(--bg);
+      -webkit-font-smoothing:antialiased;
+    }}
+    .brand {{ text-align:center; padding:22px 16px 0; font-weight:700; letter-spacing:.5px; font-size:1.05rem; }}
+    .brand b {{ background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }}
+    .hero {{ padding:26px 22px 22px; text-align:center; max-width:660px; margin:0 auto; }}
+    .hero h1 {{
+      font-family:'Fraunces',Georgia,serif; font-weight:600; letter-spacing:-.5px;
+      margin:0 0 14px; font-size:2.1rem; line-height:1.12;
+    }}
+    .hero h1 em {{ font-style:italic; background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }}
+    .hero p {{ color:var(--muted); margin:0 auto; max-width:470px; font-size:1.02rem; }}
+    .trust {{ display:flex; flex-wrap:wrap; gap:9px; justify-content:center; padding:20px 14px 6px; }}
+    .trust span {{ background:rgba(255,255,255,.05); border:1px solid var(--line); color:var(--text); font-size:.75rem; padding:7px 14px; border-radius:100px; backdrop-filter:blur(6px); }}
+    .trust b {{ background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }}
+    .cat {{ padding:14px 14px 4px; max-width:940px; margin:0 auto; }}
+    .cat h2 {{ font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:1.4rem; margin:26px 6px 14px; display:flex; align-items:center; gap:10px; }}
+    .cat h2::after {{ content:""; flex:1; height:1px; background:linear-gradient(90deg,var(--line),transparent); }}
+    .grid {{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }}
+    .card {{
+      min-width:0;
+      background:var(--card); border:1px solid var(--line); border-radius:18px; overflow:hidden;
+      text-decoration:none; color:inherit; display:flex; flex-direction:column;
+      box-shadow:0 6px 22px rgba(0,0,0,.35); transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }}
+    .card:hover {{ transform:translateY(-4px); box-shadow:0 14px 34px rgba(255,77,125,.18); border-color:rgba(255,77,125,.35); }}
     .card:active {{ transform:scale(.98); }}
-    .imgwrap {{ position:relative; }}
-    .card img {{ width:100%; aspect-ratio:1; object-fit:contain; background:#fff; display:block; }}
-    .badge {{ position:absolute; top:8px; left:8px; background:var(--accent); color:#fff; font-size:.68rem; font-weight:700; padding:3px 8px; border-radius:6px; }}
-    .card-body {{ padding:10px 12px 14px; display:flex; flex-direction:column; gap:5px; }}
-    .title {{ font-size:.82rem; line-height:1.25; margin:0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }}
-    .social {{ margin:0; font-size:.72rem; color:var(--muted); }}
-    .social .stars {{ color:var(--accent); letter-spacing:1px; }}
-    .price {{ font-weight:700; margin:0; font-size:1rem; }}
-    .was {{ font-weight:400; opacity:.5; text-decoration:line-through; font-size:.8rem; margin-left:4px; }}
-    .cta {{ margin-top:auto; background:var(--accent); color:#fff; text-align:center; padding:11px; border-radius:9px; font-size:.85rem; font-weight:700; }}
-    .midcta {{ text-align:center; padding:26px 16px; }}
-    .midcta a {{ display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:13px 26px; border-radius:11px; }}
-    .faq {{ max-width:640px; margin:0 auto; padding:20px 20px 8px; }}
-    .faq h2 {{ font-size:1.2rem; text-align:center; }}
-    .faq details {{ background:var(--card); border-radius:12px; padding:14px 16px; margin:10px 0; }}
-    .faq summary {{ font-weight:600; cursor:pointer; }}
-    .faq p {{ color:var(--muted); margin:10px 0 0; font-size:.9rem; }}
-    footer {{ padding:24px 16px 44px; text-align:center; color:var(--muted); font-size:.72rem; line-height:1.6; }}
-    @media(min-width:640px){{ .grid{{grid-template-columns:repeat(4,1fr);}} .hero h1{{font-size:2.1rem;}} }}
+    .imgwrap {{ position:relative; padding:12px 12px 0; }}
+    .card img {{ width:100%; aspect-ratio:1; object-fit:contain; background:#fff; display:block; border-radius:12px; }}
+    .badge {{ position:absolute; top:20px; left:20px; background:var(--grad); color:#fff; font-size:.68rem; font-weight:700; padding:4px 10px; border-radius:100px; box-shadow:0 3px 10px rgba(255,77,125,.4); }}
+    .card-body {{ padding:12px 14px 16px; display:flex; flex-direction:column; gap:6px; }}
+    .title {{ font-size:.84rem; font-weight:500; line-height:1.3; margin:0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }}
+    .social {{ margin:0; font-size:.73rem; color:var(--muted); display:flex; align-items:center; gap:5px; }}
+    .social .stars {{ color:var(--gold); letter-spacing:1px; }}
+    .price {{ font-weight:700; margin:2px 0 0; font-size:1.15rem; }}
+    .was {{ font-weight:400; opacity:.45; text-decoration:line-through; font-size:.8rem; margin-left:5px; }}
+    .cta {{ margin-top:10px; background:var(--grad); color:#fff; text-align:center; padding:12px; border-radius:11px; font-size:.85rem; font-weight:700; box-shadow:0 4px 14px rgba(255,77,125,.28); }}
+    .midcta {{ text-align:center; padding:34px 16px 8px; }}
+    .midcta a {{ display:inline-block; background:rgba(255,255,255,.06); border:1px solid var(--line); color:var(--text); text-decoration:none; font-weight:600; padding:14px 30px; border-radius:100px; transition:border-color .18s; }}
+    .midcta a:hover {{ border-color:rgba(255,77,125,.5); }}
+    .faq {{ max-width:660px; margin:0 auto; padding:28px 22px 8px; }}
+    .faq h2 {{ font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:1.5rem; text-align:center; margin-bottom:18px; }}
+    .faq details {{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; margin:11px 0; transition:border-color .18s; }}
+    .faq details[open] {{ border-color:rgba(255,77,125,.3); }}
+    .faq summary {{ font-weight:600; cursor:pointer; list-style:none; }}
+    .faq summary::-webkit-details-marker {{ display:none; }}
+    .faq summary::after {{ content:"+"; float:right; color:var(--accent); font-size:1.2rem; line-height:1; }}
+    .faq details[open] summary::after {{ content:"–"; }}
+    .faq p {{ color:var(--muted); margin:12px 0 0; font-size:.92rem; }}
+    footer {{ padding:30px 16px 48px; text-align:center; color:var(--muted); font-size:.72rem; line-height:1.7; border-top:1px solid var(--line); margin-top:20px; }}
+    @media(min-width:640px){{ .grid{{grid-template-columns:repeat(4,1fr);}} .hero h1{{font-size:2.7rem;}} }}
   </style>
 </head>
 <body>
+  <div class="brand">Viral<b>Finds</b></div>
   <header class="hero">
-    <h1>The TikTok-viral beauty finds that are <span>actually</span> Amazon best sellers</h1>
+    <h1>The TikTok-viral beauty finds that are <em>actually</em> Amazon best sellers</h1>
     <p>We verify every pick against Amazon's live Best Sellers rankings — real ratings, real ranks, real prices. Verified, not hype.</p>
   </header>
   <div class="trust">
