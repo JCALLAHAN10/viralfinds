@@ -92,10 +92,26 @@ system auto-applies.
   recommendation. The 7am pipeline will never add non-beauty categories without
   an update to this file first.
 
-## How to reach the other session
+## Communication protocol (Jack's standing directive, 2026-07-18)
 
-Leave notes in this file (update both repos) and/or in each repo's own log:
+Jack wants the two sessions actively sharing findings — this is key to his
+workflow. BOTH sessions follow this loop:
+
+1. **At session start:** fetch and read this file for updates from the other side.
+2. **During work:** when you learn something that affects the other lane —
+   which products get clicks, which pins/articles drive traffic, a shared-asset
+   change, a category question — write it into this file (update BOTH repos in
+   the same change).
+3. **Findings log:** append dated one-liners under "Findings" below rather than
+   restructuring the file. Keep it scannable.
+4. Jack relays anything urgent between sessions himself; this file is the
+   durable channel.
+
+Per-repo detail logs remain:
 - trendtrackr: `GROWTH_LOG.md` (narrative history of every growth action)
 - viralfinds: `pipeline.log` / commit messages from the daily cycle
 
-Jack relays messages between sessions when needed.
+## Findings
+
+- 2026-07-18 (viralfinds): GA4 live on both sites, separate properties. No
+  traffic data yet — first useful click-through numbers expected once pins go up.
