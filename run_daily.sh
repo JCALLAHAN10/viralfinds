@@ -15,6 +15,11 @@ export PATH="$HOME/bin:$PATH"   # gh lives in ~/bin
 echo "===== run $(date '+%Y-%m-%d %H:%M:%S') =====" >> pipeline.log
 python3 orchestrator.py >> pipeline.log 2>&1
 
+# Content generators (plan P1+P3): article/sitemap + pin queue stay in sync
+# with the product feed. Cheap no-ops when nothing changed.
+python3 article_generator.py >> pipeline.log 2>&1
+python3 pin_generator.py >> pipeline.log 2>&1
+
 # Deploy: only reached if the orchestrator succeeded (set -e above). The
 # orchestrator commits per-stage, so commit anything left over, then push
 # whenever local main is ahead of origin.

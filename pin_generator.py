@@ -120,6 +120,63 @@ def render_pin(p, path):
     img.save(path, "PNG")
 
 
+
+ARTICLE_URL = SITE_URL + "articles/tiktok-viral-skincare-verified.html"
+
+
+def render_pin_value(p, path):
+    """Variant B — price/value hook."""
+    img = Image.new("RGB", (W, H), BG)
+    d = ImageDraw.Draw(img)
+    d.text((60, 70), "Viral", font=f(64), fill=TEXT)
+    d.text((60 + d.textlength("Viral", font=f(64)), 70), "Finds", font=f(64), fill=ACCENT)
+    d.text((60, 150), "VERIFIED, NOT HYPE", font=f(28), fill=MUTED)
+    d.text((60, 330), "STILL ONLY", font=f(44), fill=MUTED)
+    d.text((60, 400), p["price"], font=f(230), fill=ACCENT)
+    y = 700
+    for line in wrap(d, p["title"], f(52), W - 120)[:4]:
+        d.text((60, y), line, font=f(52), fill=TEXT)
+        y += 66
+    y += 30
+    d.text((60, y), f'{p["ratings_count"]:,} real Amazon ratings', font=f(40, bold=False), fill=TEXT)
+    d.text((60, y + 60), f'{p["rating"]} out of 5 · Best Seller #{p["sales_rank"]} in Beauty',
+           font=f(36, bold=False), fill=MUTED)
+    d.rounded_rectangle([60, H - 220, W - 60, H - 110], 20, fill=ACCENT)
+    d.text((W // 2, H - 165), "See the verified breakdown  →", font=f(40), anchor="mm", fill=BG)
+    d.text((W // 2, H - 70), "jcallahan10.github.io/viralfinds", font=f(30, bold=False), anchor="mm", fill=MUTED)
+    img.save(path, "PNG")
+
+
+def render_pin_receipts(p, path):
+    """Variant C — verification/receipts hook."""
+    img = Image.new("RGB", (W, H), BG)
+    d = ImageDraw.Draw(img)
+    d.text((60, 70), "Viral", font=f(64), fill=TEXT)
+    d.text((60 + d.textlength("Viral", font=f(64)), 70), "Finds", font=f(64), fill=ACCENT)
+    d.text((60, 180), "Is it ACTUALLY viral-worthy?", font=f(54), fill=TEXT)
+    d.text((60, 260), "We checked the receipts.", font=f(54), fill=ACCENT)
+    y = 400
+    for line in wrap(d, p["title"], f(48), W - 120)[:3]:
+        d.text((60, y), line, font=f(48), fill=MUTED)
+        y += 60
+    y += 40
+    checks = [
+        f'Amazon Best Seller #{p["sales_rank"]} — live ranking',
+        f'{p["rating"]} stars from {p["ratings_count"]:,} ratings',
+        f'Real listing at {p["price"]} — checked before posting',
+        "No fake urgency. No invented discounts.",
+    ]
+    for chk in checks:
+        d.rounded_rectangle([60, y, W - 60, y + 120], 16, fill=CARD)
+        d.line([(95, y + 60), (113, y + 80), (148, y + 38)], fill=ACCENT, width=9, joint="curve")
+        for i, line in enumerate(wrap(d, chk, f(32, bold=False), W - 240)[:2]):
+            d.text((160, y + 28 + i * 40), line, font=f(32, bold=False), fill=TEXT)
+        y += 140
+    d.rounded_rectangle([60, H - 200, W - 60, H - 95], 20, fill=ACCENT)
+    d.text((W // 2, H - 148), "All 5 verified picks  →", font=f(40), anchor="mm", fill=BG)
+    img.save(path, "PNG")
+
+
 # Per-product natural-language hooks. Research finding (2026-07-18): raw
 # comma-separated keyword lists read as "keyword stuffing" — a known Pinterest
 # spam signal. Keywords must be woven into natural sentences instead.
@@ -160,12 +217,29 @@ def main():
         if not (p.get("title") and p.get("rating")):
             continue
         slug = slugify(p["title"])
-        path = os.path.join(ASSETS_DIR, f"pin-{slug}.png")
-        if force or not os.path.exists(path):
-            render_pin(p, path)
-            print(f"rendered {path}")
-        media = f"{SITE_URL}assets/pin-{slug}.png"
-        entries.append((p["title"], save_url(p, media)))
+        hook, tags = HOOKS.get(p["asin"], ("A verified TikTok-viral beauty find.", "#beautyfinds"))
+        base = (f'{p["title"]} — {p["rating"]} stars from {p["ratings_count"]:,} real '
+                f'Amazon reviews, verified against the live Best Sellers rankings.')
+        variants = [
+            ("", render_pin, SITE_URL,
+             f'{base} {hook} See all 5 verified TikTok-viral beauty picks on ViralFinds. {tags}'),
+            ("-value", render_pin_value, f'{ARTICLE_URL}#{p["asin"]}',
+             f'Still only {p["price"]} on Amazon: {p["title"]}. {base} Full verified '
+             f'breakdown of every pick on ViralFinds. {tags}'),
+            ("-verified", render_pin_receipts, ARTICLE_URL,
+             f'Is it actually worth the hype? We checked the receipts on {p["title"]}: '
+             f'Best Seller #{p["sales_rank"]}, {p["rating"]} stars, {p["ratings_count"]:,} '
+             f'ratings — all verified against Amazon\'s live rankings. {tags}'),
+        ]
+        for suffix, renderer, dest, desc in variants:
+            path = os.path.join(ASSETS_DIR, f"pin-{slug}{suffix}.png")
+            if force or not os.path.exists(path):
+                renderer(p, path)
+                print(f"rendered {path}")
+            media = f"{SITE_URL}assets/pin-{slug}{suffix}.png"
+            q = urllib.parse.urlencode({"url": dest, "media": media, "description": desc})
+            label = p["title"] + {"": " (stat card)", "-value": " (price hook)", "-verified": " (receipts hook)"}[suffix]
+            entries.append((label, f"https://www.pinterest.com/pin/create/button/?{q}"))
 
     with open(QUEUE_PATH, "w") as fh:
         fh.write(

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jcallahan10.github.io/viralfinds/sitemap.xml
