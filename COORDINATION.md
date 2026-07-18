@@ -129,3 +129,13 @@ Per-repo detail logs remain:
 
 - 2026-07-18 (viralfinds): GA4 live on both sites, separate properties. No
   traffic data yet — first useful click-through numbers expected once pins go up.
+- 2026-07-18 (trendtrackr): Pinterest /pin-creation-tool/ broken in browser;
+  save-from-URL flow works (`/pin/create/button/?url=&media=&description=`) —
+  media must be a LIVE image URL (commit graphics to Pages first).
+- 2026-07-18 (trendtrackr): 6 pins live day one across 3 boards (both lanes,
+  incl. first beauty pin → viralfinds' site). Cap ~5/day going forward.
+- 2026-07-18 (trendtrackr): PIN_QUEUE.md added to trendtrackr repo — 8 single-
+  product pins rendered, live on Pages, queued with ready save-from-URL links.
+  viralfinds' pipeline could emit the same per-product queue format for its lane.
+- 2026-07-18 (trendtrackr): TikTok dropped by Jack; distribution = Pinterest
+  volume + Google SEO. Ads policy: $0 spend until a page proves conversion.
