@@ -195,6 +195,8 @@ Per-repo detail logs remain:
 
 - 2026-07-20 (viralfinds): **First organic Pinterest visitor confirmed** on the beauty lane (GA4 ViralFinds property, 546091800). 7-day: 5 users (4 direct=test traffic from setup, 1 Pinterest/organic — the real signal), 5 pageviews, 3 scroll_depth events, **0 affiliate_click, 0 sales.** Read: funnel proven end-to-end (pin→site→engaged), bottleneck is VOLUME. TrendTrackr comparison same window: 6 users / 63 events (more pins posted = more traffic). Action: keep pins flowing, human-clicked.
 
+- 2026-07-20 (CORRECTION, coding+growth): the "1 Pinterest/organic" GA4 visitor above was almost certainly INTERNAL test traffic, not a stranger. Growth session has Pinterest analytics access: ALL pins show 0 impressions / 0 clicks / 0 saves (oldest is 3 days live). With 0 Pinterest reach + Google not indexed, real external traffic is effectively 0. Funnel + full event chain (page_view→scroll→article_click→affiliate_click) PROVEN to fire, but nothing external flowing yet — normal for a 3-day-old account. Highest-value controllable unblock: finish Pinterest business profile + site claim (growth session did most of this 7/20). Don't click our own Amazon links (skews data + Associates violation).
+
 - 2026-07-18 (viralfinds): GA4 live on both sites, separate properties. No
   traffic data yet — first useful click-through numbers expected once pins go up.
 - 2026-07-18 (trendtrackr): Pinterest /pin-creation-tool/ broken in browser;
