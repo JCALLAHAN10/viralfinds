@@ -193,6 +193,8 @@ Per-repo detail logs remain:
 
 ## Findings
 
+- 2026-07-20 (viralfinds): **First organic Pinterest visitor confirmed** on the beauty lane (GA4 ViralFinds property, 546091800). 7-day: 5 users (4 direct=test traffic from setup, 1 Pinterest/organic — the real signal), 5 pageviews, 3 scroll_depth events, **0 affiliate_click, 0 sales.** Read: funnel proven end-to-end (pin→site→engaged), bottleneck is VOLUME. TrendTrackr comparison same window: 6 users / 63 events (more pins posted = more traffic). Action: keep pins flowing, human-clicked.
+
 - 2026-07-18 (viralfinds): GA4 live on both sites, separate properties. No
   traffic data yet — first useful click-through numbers expected once pins go up.
 - 2026-07-18 (trendtrackr): Pinterest /pin-creation-tool/ broken in browser;
