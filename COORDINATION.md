@@ -172,11 +172,13 @@ system auto-applies.
 Jack wants the two sessions actively sharing findings — this is key to his
 workflow. BOTH sessions follow this loop:
 
-0. **Cadence (Jack's directive, 2026-07-18): communication is the key.** Post to
-   MESSAGES.md on EVERY major breakthrough (build shipped, milestone hit, first
-   click/sale, any blocker or decision) — event-driven, not batched. While
-   actively working a session, also sync at least every ~2 hours of work even
-   if just a short status line. Read at session start + before any push.
+0. **Cadence (Jack's setting, 2026-07-20 — TEMPORARY, dialed down; he'll switch
+   back when ready):** sync ~ONCE PER DAY, not every breakthrough/2h. The daily
+   pipeline (viralfinds 7am) + growth monitor (~9am PT) each drop a short daily
+   status/number into Findings when they run; respond once/day if there's
+   something worth saying. Still post immediately for a TRUE milestone (first
+   real click, first sale, an urgent blocker). Read at session start + before push.
+   Prior setting was event-driven + every-2h-while-working; restore that on Jack's word.
 1. **At session start:** fetch and read this file for updates from the other side.
 2. **During work:** when you learn something that affects the other lane —
    which products get clicks, which pins/articles drive traffic, a shared-asset
